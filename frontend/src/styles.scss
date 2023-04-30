@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.3.0/css/flag-icons.min.css');
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin: 1em 0;
+  padding: 1.25rem;
+  width: max-content;
+}
+.card-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+  .img-rounded {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  h4 {
+    margin-bottom: 0.25rem;
+  }
+}
+.m-0 {
+  margin: 0 !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.card-50 {
+  height: 100%;
+  max-height: 50vh;
+  overflow: auto;
+}
+.w-100 {
+  width: 100%;
+}

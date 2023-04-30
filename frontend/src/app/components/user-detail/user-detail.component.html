@@ -1,0 +1,53 @@
+<div class="d-flex">
+  <div class="card">
+    <div class="card-header">
+      <img
+        src="{{ user.avatar_url }}"
+        alt="{{ user.name }}"
+        class="img-rounded"
+      />
+      <div>
+        <h4>{{ user.name }}</h4>
+        <p>@{{ user.login }}</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <p className="bio">{{ user.bio }}</p>
+      <p>Location :{{ user.location }}</p>
+      <p>Followers :{{ user.followers }}</p>
+      <p>Following :{{ user.following }}</p>
+      <p>Repos :{{ user.public_repos }}</p>
+      <p>Gits :{{ user.public_gists }}</p>
+      <p>Twitter :{{ user.twitter_username }}</p>
+    </div>
+  </div>
+  <div class="followers-container card-50 card">
+    <ng-container class="" *ngFor="let follower of followers">
+      <app-follower-card
+        class="w-100"
+        [avatar]="follower.avatar_url"
+        [login]="follower.login"
+        [link]="follower.url"
+      ></app-follower-card>
+    </ng-container>
+  </div>
+  <div class="followers-container card-50 card">
+    <ng-container class="" *ngFor="let follower of followers">
+      <app-follower-card
+        class="w-100"
+        [avatar]="follower.avatar_url"
+        [login]="follower.login"
+        [link]="follower.url"
+      ></app-follower-card>
+    </ng-container>
+  </div>
+  <div class="followers-container card-50 card">
+    <ng-container class="" *ngFor="let repo of repos">
+      <app-card-repo
+        class="w-100"
+        [userName]="repo.login"
+        [repo]="repo.login"
+      ></app-card-repo>
+    </ng-container>
+  </div>
+</div>

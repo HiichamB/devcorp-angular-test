@@ -1,0 +1,8 @@
+<div class="d-flex">
+  <app-card-user
+    [routerLink]="['/users', user.login]"
+    *ngFor="let user of users"
+    [name]="user.login"
+    [avatar]="user.avatar_url"
+  ></app-card-user>
+</div>
