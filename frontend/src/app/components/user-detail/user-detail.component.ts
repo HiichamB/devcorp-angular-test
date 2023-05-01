@@ -12,6 +12,7 @@ export class UserDetailComponent implements OnInit {
   login: string = ''
   repos: any = []
   followers: any = []
+  followings: any = []
 
   constructor(
     private gitHubService: GithubServiceService,
@@ -32,7 +33,6 @@ export class UserDetailComponent implements OnInit {
         this.gitHubService.getUserRepos(this.user.login).subscribe({
           next: (repos) => {
             this.repos = repos
-            console.log(this.repos)
           },
         })
         this.gitHubService.getUserFollowers(this.user.login).subscribe({

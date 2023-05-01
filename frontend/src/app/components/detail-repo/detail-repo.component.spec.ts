@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { DetailRepoComponent } from './detail-repo.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('DetailRepoComponent', () => {
+  let component: DetailRepoComponent;
+  let fixture: ComponentFixture<DetailRepoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ DetailRepoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(DetailRepoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

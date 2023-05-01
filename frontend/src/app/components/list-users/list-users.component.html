@@ -1,8 +1,22 @@
-<div class="d-flex">
-  <app-card-user
-    [routerLink]="['/users', user.login]"
-    *ngFor="let user of users"
-    [name]="user.login"
-    [avatar]="user.avatar_url"
-  ></app-card-user>
+<nav class="navbar navbar-light bg-light d-flex justify-content-center">
+  <form class="form-inline">
+    <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Search"
+      [formControl]="searchControl"
+      (ngModelChange)="onSearchChange($event)"
+    />
+  </form>
+</nav>
+<div class="mt-5">
+  <div class="row">
+    <app-card-user
+      class="col-lg-3 col-md-4 mb-3 cursor-pointer"
+      [routerLink]="['/users', user.login]"
+      *ngFor="let user of users"
+      [name]="user.login"
+      [avatar]="user.avatar_url"
+    ></app-card-user>
+  </div>
 </div>

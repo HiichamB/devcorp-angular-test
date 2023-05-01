@@ -1,0 +1,17 @@
+<div class="mt-2">
+  <div class="row w-100">
+    <div class="col-md-4 mb-2" *ngIf="reposData">
+      <app-card-repo
+        [repoName]="reposData?.name"
+        [userName]="reposData?.owner?.login"
+        [description]="reposData?.description"
+        [stars]="reposData?.stargazers_count"
+      ></app-card-repo>
+    </div>
+    <div class="col-md-8 mb-2">
+      <div class="card card-body">
+        <canvas id="MyChart" #MyChart></canvas>
+      </div>
+    </div>
+  </div>
+</div>

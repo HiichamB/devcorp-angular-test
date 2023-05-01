@@ -1,1 +1,28 @@
-<p>card-repo works!</p>
+<div class="card card-body">
+  <h4>
+    {{ repoName }}
+  </h4>
+  <div class="d-flex align-items-center" *ngIf="description">
+    <p class="m-0">{{ description }}</p>
+  </div>
+
+  <div>
+    <i class="fa-solid fa-star"></i>
+    Total Stars:{{ stars }}
+  </div>
+
+  <div>
+    <i class="fa-solid fa-code-commit"></i>
+
+    Total Commits:{{ commits?.length }}
+  </div>
+  <div>
+    <i class="fa-solid fa-star"></i>
+
+    Total Issues:{{ issues?.length }}
+  </div>
+  <div>
+    <i class="fa-solid fa-code-compare"></i>
+    Total pulls:{{ pullRequests?.length }}
+  </div>
+</div>
